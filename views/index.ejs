@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ляхов А.А.</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+
+    <% if (typeof Auth==='undefined' ) {%>
+
+        <%- include('header/unauth') %>
+
+            <%} else {%>
+
+                <%- include('header/auth') %>
+                    <div class="menu">
+                        <ul>
+                            <li><span id="1" class="menu-items">Добавить новую область знаний</span>
+                            </li>
+                            <li><span id="2" class="menu-items">Посмотреть области знаний</span></li>
+                            <li><span id="3" class="menu-items">Создать новый #tag</span></li>
+                            <li><span id="10" class="menu-items">Посмотреть мои #tag-и по области знаний</span></li>
+                            <li><span id="4" class="menu-items">Поиск сообщения по #tag</span></li>
+                            <li><span id="5" class="menu-items">Создать чат</span></li>
+                            <li><span id="6" class="menu-items">Чаты</span></li>
+                            <li><span id="7" class="menu-items">Приватные чаты</span></li>
+                            <li><span id="8" class="menu-items">Новое сообщение</span></li>
+                        </ul>
+
+                        <div class="forms">
+
+                        </div>
+
+
+                    </div>
+                    <script src="/js/fetchData.js"></script>
+                    <script src="/js/fk/index.js"> </script>
+                    <script src="/js/htag/index.js"> </script>
+                    <script src="/js/msg/index.js"> </script>
+                    <script src="/js/menus.js"></script>
+                    <script src="/js/sAlert.js"></script>
+                    <script src="/js/fk/events.js"> </script>
+                    <%}%>
+
+
+                        <style>
+                            .link {
+                                cursor: pointer;
+                                text-decoration: underline;
+                                color: rgb(37, 37, 37);
+                                font-size: 16px;
+                                padding: 15px;
+                            }
+
+                            .link:hover {
+                                color: red;
+                            }
+
+                            .information__items {
+                                border: 1px solid #000;
+                                padding: 15px;
+                            }
+
+                            .information__item {
+                                margin: 15px;
+                            }
+
+
+                            .menu {
+                                display: flex;
+                                align-items: center;
+                            }
+
+                            .menu ul li {
+                                margin-top: 15px;
+                            }
+
+
+                            .menu-items:hover {
+                                color: red;
+                            }
+
+                            .menu-items {
+                                cursor: pointer;
+                            }
+
+                            .menu button {
+                                margin-top: 15px;
+                            }
+
+                            .menu form {
+                                border: 1px solid #000;
+                                padding: 15px;
+                                display: flex;
+                                flex-direction: column;
+                                margin-left: 15px;
+                            }
+
+                            .menu form input {
+                                margin-top: 10px;
+                                margin-bottom: 10px;
+                            }
+                        </style>
+</body>
+
+</html>
